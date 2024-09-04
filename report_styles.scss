@@ -1,0 +1,15 @@
+/*--- scss:defaults --*/
+
+$headings-color: rgb(214, 171, 0)
+$heading-font-family: "Open Sans"
+
+/*--- scss:rules --*/
+
+h2 {
+  background-color: $headings-color;
+  font-family: $heading-font-family !important;
+  border-radius: 0.37rem;
+  text-align: left;
+  color: white;
+  border-bottom: 1px solid black;
+}

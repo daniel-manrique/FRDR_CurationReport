@@ -1,0 +1,159 @@
+---
+title-block-banner: true
+title: "Data curation report form FRDR"
+date: today
+data-format: full
+
+author: 
+  - name: "Daniel Manrique-Castano"
+    degrees:
+      - Ph.D
+    affiliation:
+      - name: Digital Research Alliance of Canada
+      - department: Research Data Management
+      
+format: 
+   html: 
+    toc: true
+    toc-depth: 2
+    toc-title: "Contents"
+    embed-resources: true
+    theme: cosmo, report_styles.scss
+    css: report_styles.scss
+    
+   typst:
+    papersize: us-letter
+    toc: true
+    toc-depth: 2
+    toc-title: Contents
+    columns: 1
+    number-sections: true
+    section-numbering: 1.1.a
+    template-partials: 
+      - typst-show.typ
+      - typst-template.typ
+    css: report_styles.scss
+    
+   docx:
+    papersize: us-letter
+    toc: false
+    columns: 1
+    number-sections: true
+      
+params:
+  internalid: 917
+  
+editor: source
+---
+
+# Dataset identification
+
+- **Dataset title:** Foliar Functional Trait Mapping  
+- **Date of deposit:** 2024-08-11  
+- **DOI:** [10.20383/103.0922](https://doi.org/10.20383/103.0922)  
+- **Primary Contact:** [Alice Gravel](mailto:alice.gravel@umontreal.ca)  
+
+
+# License
+
+::: {.callout-note}
+## Creative Commons Attribution-NoDerivatives 4.0 (CC BY-ND 4.0). 
+This license enables reusers to copy and distribute the material in any medium or format in unadapted form only, and only so long as attribution is given to the creator. The license allows for commercial use. It includes: 
+
+BY: credit must be given to the creator.  
+ND: No derivatives or adaptations of the work are permitted.  
+https://creativecommons.org/licenses/by-nd/4.0/
+:::
+
+
+# Executive Summary
+
+This report provides an evaluation of the dataset titled *Foliar Functional Trait Mapping*, deposited on **2024-08-11**. The evaluation includes a review of the dataset's metadata, file structure, and documentation, followed by recommendations to improve the discoverability, reusability, and compliance with repository standards.
+
+
+# A. Deposited files
+
+### 1. Folder and file structure
+
+The folder and file are organized logically and follow a consistent naming convention. 
+
+### 2. Fille acces and types
+
+The deposit contains a series of GEOTiff files which can be correctly opened using QGis 3.34
+
+
+# B. Readme File
+
+I respectfully make the following recommendations for the readme file:
+
+### 1. For file description:
+
+- For the plsr_data.csv file (also applicable for plsr_data_BN.csv) I strongly recommend to provide a codebook defining the variables (columns) in the table. This will improve the understandability of the table and promote its reuse. 
+
+- Likewise, I recommend to be more descriptive/specific about the coefficients for the models (car, carbon, cell, etc). The intercept is clear and universal but the column names from 400 to 2397 are not highly informative. A better description of these numbers (coefficients) will facilitate the comprehension and reuse of the dataset. Indeed, the coefficients make more sense if in the methodological information the authors specify the model. If these are the same coefficients in  plsr_data.csv, the same codebook may be applicable. The author can indicate this in the file description (reference to the same codebook) if it is the case.
+
+### 2. For methodological information: 
+
+- Although methods can be found in the research article, I strongly recommend that you include methodological information here. Datasets are standalone objects that should be understandable and reusable independently of the research article to which they are associated. 
+
+::: {.callout-tip}
+## Update the readme file
+
+It is recommended that the depositor can update the readme file with the points stated above.
+:::
+
+
+# C. System metadata
+
+I respectfully make the following recommendations to improve the system metadata:
+
+### 1. Required Metadata
+
+- **Title:** A more descriptive tile can improve the discoverability of the dataset.  
+- **Description:** Expand the description to capture the content, methods and location where the data were collected. 
+
+::: {.callout-tip}
+## A more descriptive title
+It is recommended to provide more details in the description. The folliwing is an example from your research group:  
+  
+  *"This dataset contains UAV photogrammetric products, UAV LiDAR point clouds, hand-made tree crown segmentation polygons, and georeferenced tree height and stem diameter measurements in carbon sequestration plantations in Quebec, Canada."*  
+:::
+
+- **Keywords:** If suitable, think in additional keywords for broader discoverability.  
+
+### 2. Geographic Metadata
+
+- If suitable, please add geographic coordinates or bounding boxes of your dataset. 
+
+
+### 3. Access and Preservation
+
+You have stated that an embargo is applicable until 2024-05-01. 
+
+::: {.callout-caution}
+## Question 1
+
+Please verify the selected embargo date (2024-05-01). Is it intended for 2025 or do you want to make it public as as soon as it is published? 
+
+:::
+
+Additionally, please verify the following inconsistencies:
+
+| **Element**            | **Readme**                      | **System metadata**                       |
+|------------------------|---------------------------------|-------------------------------------------|
+| *Title*                | Foliar Functional Trait Mapping | Foliar Functional Trait Mapping in Québec |
+| *Data collection date* | 2024-01-01                      | 2024-03-27                                |
+
+
+::: {.callout-tip}
+## Verify inconsistencies
+
+Please verify the title and collection date stated in the readme file and the system metadata and make the changes accordingly.
+:::
+
+# D. Recommendations and next steps
+
+The depositor can implement the above recommendations directly in the readme file and system metadata to improve the discoverability and reusability of the data set. If you have any questions about the embargoed data, please do not hesitate to contact us by e-mail. 
+
+
+
